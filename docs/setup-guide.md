@@ -23,6 +23,7 @@ sudo apt upgrade -y
 
 sudo apt install -y curl wget git vim nano ufw software-properties-common 
 net-tools htop unzip
+'''
 
 Set a nice hostname (optional but recommended)
 sudo hostnamectl set-hostname <HOSTNAME>
