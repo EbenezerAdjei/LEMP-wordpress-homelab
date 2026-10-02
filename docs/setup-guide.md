@@ -23,7 +23,7 @@ sudo apt upgrade -y
 
 sudo apt install -y curl wget git vim nano ufw software-properties-common 
 net-tools htop unzip
-'''bash
+bash'''
 
 Set a nice hostname (optional but recommended)
 sudo hostnamectl set-hostname <HOSTNAME>
