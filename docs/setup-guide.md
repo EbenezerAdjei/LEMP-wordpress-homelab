@@ -164,7 +164,7 @@ Create the site configuration and paste the example configuration:
 ```bash
 sudo nano /etc/nginx/sites-available/wordpress
 ```
-
+```bash
 server {
     listen 80;
     server_name YOUR_SERVER_IP;  # replace with your IP or domain
@@ -185,7 +185,7 @@ server {
         deny all;
     }
 }
-
+```
 
 Enable the site and reload nginx:
 ```bash
