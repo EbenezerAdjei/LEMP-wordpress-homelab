@@ -227,17 +227,17 @@ too open. This is a security problem.
 Hardening permissions applies the principle of least privilege: give 
 only the access that is required.
 
-Command,                    Purpose
-chown -R www-data:www-data, Makes the web server the owner of the files so 
+--- Command         |           --- Purpose
+chown -R www-data:www-data | Makes the web server the owner of the files so 
                             WordPress can run correctly
 
-Directories 755,            Allows the server to enter folders and serve content, 
+Directories 755   |         Allows the server to enter folders and serve content, 
                             but prevents other users from writing to them
 
-Files 644,                  Allows the server to read files, but prevents normal 
+Files 644      |            Allows the server to read files, but prevents normal 
                             users from editing them
 
-wp-config.php → 600        Restricts the most sensitive file (database password, 
+wp-config.php → 600  |       Restricts the most sensitive file (database password, 
                             keys) so only the owner can read it
 
 
