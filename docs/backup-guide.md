@@ -61,12 +61,12 @@ chmod +x ~/scripts/backup-wordpress.sh
 
 Successful output example:
 
-[+] Starting WordPress backup: 2026-10-01_09-00-50
-[+] Backing up files from /var/www/wordpress
-[+] Backing up database: wordpress
-[+] Creating final archive
-[+] Removing backups older than 7 days
-[✓] Backup completed: 
+- [+] Starting WordPress backup: 2026-10-01_09-00-50
+- [+] Backing up files from /var/www/wordpress
+- [+] Backing up database: wordpress
+- [+] Creating final archive
+- [+] Removing backups older than 7 days
+- [✓] Backup completed: 
 /var/backups/wordpress/wordpress_backup_2026-10-01_09-00-50.tar.gz
 
 Verifying the Backup
@@ -82,5 +82,5 @@ tar -tzf
 ```
 
 Expected contents include:
-wordpress_files.tar.gz
-wordpress_db.sql
+- wordpress_files.tar.gz
+- wordpress_db.sql
