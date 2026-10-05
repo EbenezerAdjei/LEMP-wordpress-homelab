@@ -200,11 +200,11 @@ http://YOUR_SERVER_IP
 
 Use the following database settings in the WordPress installer:
 
-Database name: <ENTER_YOUR_DATABASE_NAME>
-Username: <ENTER_YOUR_DATABASE_USER>
-Password: <DATABASE_PASSWORD>
-Database host: localhost
-Table prefix: wp_
+- Database name: <ENTER_YOUR_DATABASE_NAME>
+- Username: <ENTER_YOUR_DATABASE_USER>
+- Password: <DATABASE_PASSWORD>
+- Database host: localhost
+- Table prefix: wp_
 
 Complete the installation and confirm admin login works.
 
@@ -227,18 +227,14 @@ too open. This is a security problem.
 Hardening permissions applies the principle of least privilege: give 
 only the access that is required.
 
---- Command         |           --- Purpose
-chown -R www-data:www-data | Makes the web server the owner of the files so 
-                            WordPress can run correctly
 
-Directories 755   |         Allows the server to enter folders and serve content, 
-                            but prevents other users from writing to them
+| Command | Purpose |
+| :--- | :--- |
+| `chown -R www-data:www-data` | Makes the web server the owner of the files so WordPress can run correctly |
+| `find . -type d -exec chmod 755 {} +` *(Directories 755)* | Allows the server to enter folders and serve content, but prevents other users from writing to them |
+| `find . -type f -exec chmod 644 {} +` *(Files 644)* | Allows the server to read files, but prevents normal users from editing them |
+| `chmod 600 wp-config.php` | Restricts the most sensitive file (database password, keys) so only the owner can read it |
 
-Files 644      |            Allows the server to read files, but prevents normal 
-                            users from editing them
-
-wp-config.php → 600  |       Restricts the most sensitive file (database password, 
-                            keys) so only the owner can read it
 
 
 
