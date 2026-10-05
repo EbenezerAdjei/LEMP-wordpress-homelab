@@ -70,13 +70,13 @@ sudo mariadb-secure-installation
 
 Recommended answers:
 
-Enter current password for root → just press Enter (no password yet)
-Switch to unix_socket authentication?  n
-Set root password: Yes
-Remove anonymous users: Yes
-Disallow root login remotely: Yes
-Remove test database: Yes
-Reload privilege tables: Yes
+- Enter current password for root → just press Enter (no password yet)
+- Switch to unix_socket authentication?  n
+- Set root password: Yes
+- Remove anonymous users: Yes
+- Disallow root login remotely: Yes
+- Remove test database: Yes
+- Reload privilege tables: Yes
 
 Test login:
 ```bash
