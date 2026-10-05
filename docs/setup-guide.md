@@ -83,35 +83,35 @@ Test login:
 sudo mariadb
 ```
 
-##4. Install PHP and PHP-FPM
+## 4. Install PHP and PHP-FPM
 NB: Ondřej Surý has shifted from the Launchpad PPA to his primary site at 
 packages.sury.org for newer Ubuntu releases like Resolute.
 
-##Step 1: Add the Sury.org Repository for Ubuntu
+### Step 1: Add the Sury.org Repository for Ubuntu
 Run the following commands to add the official key and repository list:
-### 1. Install required helper packages
+#### 1. Install required helper packages
 ```bash
 sudo apt update
 sudo apt install -y ca-certificates apt-transport-https lsb-release wget gnupg2
 ```
 
-### 2. Add the Sury repository signing key
+#### 2. Add the Sury repository signing key
 ```bash
 sudo wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
 ```
 
-### 3. Add the Sury PHP repository source
+#### 3. Add the Sury PHP repository source
 ```bash
 echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" | sudo tee 
 /etc/apt/sources.list.d/php.list
 ```
 
-### 4. Update package lists
+#### 4. Update package lists
 ```bash
 sudo apt update
 ```
 
-##Step 2: Install PHP 8.3 & Extensions
+### Step 2: Install PHP 8.3 & Extensions
 Now that the package list updates cleanly, run your installation command:
 ```bash
 sudo apt install -y php8.3-fpm php8.3-mysql php8.3-cli php8.3-common php8.3-curl 
@@ -119,7 +119,7 @@ php8.3-mbstring php8.3-xml php8.3-zip php8.3-gd php8.3-bcmath php8.3-intl
 php8.3-soap
 ```
 
-##Step 3: Verify Installation
+### Step 3: Verify Installation
 Verify that PHP 8.3 and the FPM service are installed properly:
 ```bash
 php -v
@@ -130,7 +130,7 @@ Make sure that “expose_php” in the /etc/php/7.2/fpm/php.ini file is set to O
 so the php version is not exposed, for security reasons.
 
 
-##5. Create a Database and Database User
+## 5. Create a Database and Database User
 ```bash
 sudo mariadb
 ```
@@ -144,7 +144,7 @@ one):
 4. EXIT;
 
 
-##6. Deploy WordPress
+## 6. Deploy WordPress
 NB: To setup wordpress on the LEMP/LAMP server usually use these steps:
 1. Download and install wordpress on the server
 2. Setup and Connect the Database for wordpress
@@ -159,7 +159,7 @@ sudo chown -R www-data:www-data /var/www/wordpress
 sudo chmod -R 755 /var/www/wordpress
 ```
 
-##7. Configure nginx Virtual Host
+## 7. Configure nginx Virtual Host
 Create the site configuration and paste the example configuration:
 ```bash
 sudo nano /etc/nginx/sites-available/wordpress
@@ -194,7 +194,7 @@ sudo nginx -t
 sudo systemctl reload nginx
 ```
 
-##8. Complete WordPress Installation
+## 8. Complete WordPress Installation
 Open in a browser:
 http://YOUR_SERVER_IP
 
@@ -213,7 +213,7 @@ file named wp-config.php, open this “wp-config.php” file and modify (as setu
 name, user, password, and generate the new salt.
 
 
-##9. Harden File Permissions
+## 9. Harden File Permissions
 ```bash
 sudo chown -R www-data:www-data /var/www/wordpress
 sudo find /var/www/wordpress -type d -exec chmod 755 {} \;
@@ -239,7 +239,7 @@ only the access that is required.
 
 
 
-##10. Final Verification
+## 10. Final Verification
 Confirm the expected versions are installed and available
 ```bash
 php -v
@@ -258,7 +258,7 @@ sudo ss -tulnp | grep -E ':80|:3306'
 ```
 
 
-##Skills Demonstrated
+## Skills Demonstrated
 
 - Linux server administration via SSH
 - nginx installation and virtual host configuration
