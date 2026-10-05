@@ -21,9 +21,8 @@ The environment was administered remotely via SSH from macOS.
 sudo apt update
 sudo apt upgrade -y
 
-sudo apt install -y curl wget git vim nano ufw software-properties-common 
-net-tools htop unzip
-c
+sudo apt install -y curl wget git vim nano ufw software-properties-common net-tools htop unzip
+```
 
 Set a nice hostname (optional but recommended)
 ```bash
@@ -266,11 +265,11 @@ sudo ss -tulnp | grep -E ':80|:3306'
 
 ##Skills Demonstrated
 
-Linux server administration via SSH
-nginx installation and virtual host configuration
-MariaDB database and user management
-PHP-FPM integration with nginx
-Manual WordPress deployment
-Permission hardening and basic security practices
-Service management with systemd
-Firewall configuration with UFW
+- Linux server administration via SSH
+- nginx installation and virtual host configuration
+- MariaDB database and user management
+- PHP-FPM integration with nginx
+- Manual WordPress deployment
+- Permission hardening and basic security practices
+- Service management with systemd
+- Firewall configuration with UFW
