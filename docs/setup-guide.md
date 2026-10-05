@@ -138,11 +138,11 @@ sudo mariadb
 Inside MariaDB, run these commands one by one (replace the password with a strong 
 one):
 
-CREATE DATABASE wordpress_db DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-GRANT ALL PRIVILEGES ON wordpress_db.* TO wordpress_user@localhost IDENTIFIED BY 
+-CREATE DATABASE wordpress_db DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+-GRANT ALL PRIVILEGES ON wordpress_db.* TO wordpress_user@localhost IDENTIFIED BY 
 'YOUR_DB_PASSWORD';
-FLUSH PRIVILEGES;
-EXIT;
+-FLUSH PRIVILEGES;
+-EXIT;
 
 
 ##6. Deploy WordPress
